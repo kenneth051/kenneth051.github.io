@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player - Dduke | Powerful Offline Android Audio Player</title>
+    <meta name="description" content="Sleek, powerful offline audio player for Android featuring dynamic album art colors, synchronized live lyrics, smart folder exclusions, and infinite shuffle.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #7C3AED;
+            --primary-dark: #5B21B6;
+            --bg-dark: #0F172A;
+            --card-bg: #1E293B;
+            --text-light: #F8FAFC;
+            --text-muted: #94A3B8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo i {
+            color: var(--primary);
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin-left: 20px;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-light);
+        }
+
+        .hero {
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #A78BFA 0%, #7C3AED 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--primary);
+            color: white;
+            padding: 14px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            box-shadow: 0 10px 25px rgba(124, 58, 237, 0.4);
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            background: var(--primary-dark);
+        }
+
+        .features {
+            padding: 60px 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.2s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+        }
+
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--text-muted);
+            text-decoration: underline;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fa-solid fa-compact-disc"></i> Dduke Music Player
+            </div>
+            <nav class="nav-links">
+                <a href="#features">Features</a>
+                <a href="docs/privacy-policy.html">Privacy Policy</a>
+                <a href="app-ads.txt">app-ads.txt</a>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <h1>Sleek, Powerful Offline Music Player</h1>
+            <p>Experience your local audio files with real-time synced lyrics, dynamic album artwork colors, smart folder filters, and zero lag performance on Android.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.neth.vibemusicplayer" class="download-btn">
+                <i class="fa-brands fa-google-play"></i> Get It On Google Play
+            </a>
+        </section>
+
+        <section class="features" id="features">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-microphone-lines"></i></div>
+                <h3>Synchronized Lyrics</h3>
+                <p>Follow along with live auto-scrolling LRC lyrics and automated online fetcher—perfect for singing along.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-folder-minus"></i></div>
+                <h3>Smart Folder Exclusions</h3>
+                <p>Keep your music library clean by excluding WhatsApp voice notes, call recordings, and custom hidden folders.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-palette"></i></div>
+                <h3>Dynamic Cover Art Themes</h3>
+                <p>Background colors and control themes morph dynamically to match the color swatch of your playing album art.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-shuffle"></i></div>
+                <h3>Infinite Smooth Shuffle</h3>
+                <p>Dual-layer queue model with priority Play Next tracks and automatic re-seeding shuffle for seamless playback.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-bolt"></i></div>
+                <h3>100% Offline & Fast</h3>
+                <p>Optimized for zero-lag startup on 10,000+ song libraries with 100% private offline storage.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-sliders"></i></div>
+                <h3>Audio Customization</h3>
+                <p>Adjust playback speed (0.5x to 2.0x), set custom sleep timers, and set ringtones with ease.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Dduke Music Player. All rights reserved. | <a href="docs/privacy-policy.html">Privacy Policy</a> | <a href="app-ads.txt">app-ads.txt</a></p>
+        </footer>
+    </div>
+</body>
+</html>
